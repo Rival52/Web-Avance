@@ -1,0 +1,139 @@
+<html><head><base href="http://tele-edu.eu/groupes-etudiants-telecom/index.html/index.html/etudiants.html/publications.html/soumettre-publication.html/contact.html">
+<title>GROUPES DES ETUDIANTS EN TELECOMMUNICATION - Contact</title>
+<style>
+  body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f4; }
+  .container { width: 80%; margin: auto; overflow: hidden; }
+  header { background: #003366; color: #ffffff; padding-top: 30px; min-height: 70px; border-bottom: #e8491d 3px solid; }
+  header a { color: #ffffff; text-decoration: none; text-transform: uppercase; font-size: 16px; }
+  header li { float: left; display: inline; padding: 0 20px 0 20px; }
+  header #branding { float: left; }
+  header #branding h1 { margin: 0; }
+  header nav { float: right; margin-top: 10px; }
+  header .highlight, header .current a { color: #e8491d; font-weight: bold; }
+  header a:hover { color: #ffffff; font-weight: bold; }
+  #main { padding: 30px 0; background: #ffffff; }
+  #main h2 { color: #003366; }
+  .section-box {
+    background: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  footer { padding: 20px; margin-top: 20px; color: #ffffff; background-color: #003366; text-align: center; }
+  form { margin-top: 20px; }
+  input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  textarea { height: 150px; }
+  .btn { 
+    display: inline-block; 
+    background: #e8491d; 
+    color: #ffffff; 
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .btn:hover { background: #003366; color: #ffffff; }
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .contact-info div {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+  }
+  .map-container {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1><span class="highlight">GROUPES DES ETUDIANTS EN TELECOMMUNICATION</span></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="file:///C:/Users/raman/Desktop/Nouveau%20dossier/Page1%20accueil.html">Accueil</a></li>
+          <li><a href="file:///C:/Users/raman/Desktop/Nouveau%20dossier/Page2%20Etudiant.html">Étudiants</a></li>
+          <li><a href="file:///C:/Users/raman/Desktop/Nouveau%20dossier/Page3%20publication.html">Publications</a></li>
+          <li class="current"><a href="file:///C:/Users/raman/Desktop/Nouveau%20dossier/Page4%20contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="main">
+    <div class="container">
+      <h2>Contactez-nous</h2>
+      <p>Vous avez des questions ou souhaitez en savoir plus sur nos programmes ? N'hésitez pas à nous contacter.</p>
+      
+      <div class="contact-info">
+        <div>
+          <h3>Adresse</h3>
+          <p>Departement Telecom<br>Ecole superieure Polytechnique<br>d'Antananarivo<br>Madagascar</p>
+        </div>
+        <div>
+          <h3>Téléphone</h3>
+          <p>+261343109842</p>
+        </div>
+        <div>
+          <h3>Email</h3>
+          <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="32515d5c465351467246575e571f5756471c5747">[email&#160;protected]</a></p>
+        </div>
+      </div>
+
+      <div class="map-container">
+        <!-- Ici, vous pouvez intégrer une carte interactive (Google Maps, OpenStreetMap, etc.) -->
+        <img src="https://via.placeholder.com/800x300.png?text=Carte+de+localisation" alt="Carte de localisation" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      
+      <form id="contact-form" method="POST" action="/send-message">
+        <div>
+          <label for="name">Nom:</label>
+          <input type="text" id="name" name="name" required="">
+        </div>
+        
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required="">
+        </div>
+        
+        <div>
+          <label for="subject">Sujet:</label>
+          <input type="text" id="subject" name="subject" required="">
+        </div>
+        
+        <div>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required=""></textarea>
+        </div>
+        
+        <button type="submit" class="btn">Envoyer le message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>GROUPES DES ETUDIANTS EN TELECOMMUNICATION, Copyright © 2023</p>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Ici, vous pouvez ajouter le code pour envoyer les données du formulaire à votre serveur
+      alert('Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.');
+      this.reset();
+    });
+  </script>
+</body></html>

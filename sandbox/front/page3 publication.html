@@ -1,0 +1,213 @@
+<html><head>
+  <base href="file:///C:/Users/raman/Desktop/Nouveau%20dossier/Page1%20accueil.html">
+  <title>Publications - TélécomÉtudiants</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  header {
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+  }
+  header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+  }
+  header #branding {
+    float: left;
+  }
+  header #branding h1 {
+    margin: 0;
+  }
+  header nav {
+    float: right;
+    margin-top: 10px;
+  }
+  header .highlight, header .current a {
+    color: #e8491d;
+    font-weight: bold;
+  }
+  header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+  }
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+  #main {
+    padding: 30px 0;
+    background: #ffffff;
+  }
+  .button {
+    height: 38px;
+    background: #e8491d;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #e8491d;
+    text-align: center;
+  }
+  .publication {
+    background: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  .publication h3 {
+    margin-top: 0;
+  }
+  .publication-meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  #addPublicationForm {
+    background: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  #addPublicationForm input[type="text"],
+  #addPublicationForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  #addPublicationForm textarea {
+    height: 100px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1><span class="highlight">TélécomÉtudiants</span></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="file:///C:/Users/raman/Desktop/Nouveau%20dossier/Page1%20accueil.html">Accueil</a></li>
+          <li><a href="file:///C:/Users/raman/Desktop/Nouveau%20dossier/Page2%20Etudiant.html">Étudiants</a></li>
+          <li class="current"><a href="file:///C:/Users/raman/Desktop/Nouveau%20dossier/Page3%20publication.html">Publications</a></li>
+          <li><a href="file:///C:/Users/raman/Desktop/Nouveau%20dossier/Page4%20contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="main">
+    <div class="container">
+      <h2>Publications</h2>
+
+      <form id="addPublicationForm">
+        <h3>Ajouter une Publication</h3>
+        <input type="text" id="title" name="title" placeholder="Titre de la publication" required>
+        <input type="text" id="author" name="author" placeholder="Auteur" required>
+        <textarea id="content" name="content" placeholder="Contenu de la publication" required></textarea>
+        <button type="submit" class="button">Publier</button>
+      </form>
+
+      <div id="publications">
+        <div class="publication">
+          <h3>L'impact de la 5G sur l'IoT</h3>
+          <div class="publication-meta">
+            Par: Dr. Sophie Martin | Date: 15 juin 2023
+          </div>
+          <p>La 5G promet de révolutionner l'Internet des Objets (IoT) en offrant des débits plus élevés, une latence réduite et une capacité accrue pour connecter des millions d'appareils. Cette technologie va permettre le développement de nouvelles applications dans des domaines tels que les villes intelligentes, l'industrie 4.0 et la santé connectée...</p>
+          <button class="button" onclick="editPublication(1)">Modifier</button>
+          <button class="button" onclick="deletePublication(1)">Supprimer</button>
+        </div>
+
+        <div class="publication">
+          <h3>Sécurité des réseaux 6G : défis et opportunités</h3>
+          <div class="publication-meta">
+            Par: Prof. Jean Dupont | Date: 10 juin 2023
+          </div>
+          <p>Alors que la 5G commence à peine à être déployée, les chercheurs se penchent déjà sur la prochaine génération de réseaux mobiles : la 6G. Cette technologie future soulève de nombreuses questions en termes de sécurité, notamment en ce qui concerne la protection de la vie privée, l'authentification quantique et la résilience face aux cyberattaques...</p>
+          <button class="button" onclick="editPublication(2)">Modifier</button>
+          <button class="button" onclick="deletePublication(2)">Supprimer</button>
+        </div>
+
+        <div class="publication">
+          <h3>L'avenir du cloud computing dans les télécommunications</h3>
+          <div class="publication-meta">
+            Par: Amélie Leroux | Date: 5 juin 2023
+          </div>
+          <p>Le cloud computing continue de transformer le paysage des télécommunications. Avec l'émergence de concepts tels que le edge computing et le fog computing, les opérateurs télécoms doivent repenser leurs infrastructures pour répondre aux besoins croissants en termes de traitement de données en temps réel et de faible latence...</p>
+          <button class="button" onclick="editPublication(3)">Modifier</button>
+          <button class="button" onclick="deletePublication(3)">Supprimer</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>TélécomÉtudiants, Copyright &copy; 2023</p>
+  </footer>
+
+  <script>
+    function editPublication(id) {
+      console.log("Édition de la publication avec l'ID:", id);
+      alert("Fonctionnalité d'édition en cours de développement. ID de la publication : " + id);
+    }
+
+    function deletePublication(id) {
+      if(confirm("Êtes-vous sûr de vouloir supprimer cette publication ?")) {
+        console.log("Suppression de la publication avec l'ID:", id);
+        alert("Publication supprimée avec succès. ID de la publication : " + id);
+        document.querySelector(`.publication:nth-child(${id})`).remove();
+      }
+    }
+
+    document.getElementById('addPublicationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      console.log("Ajout d'une nouvelle publication");
+      
+      const title = document.getElementById('title').value;
+      const author = document.getElementById('author').value;
+      const content = document.getElementById('content').value;
+      
+      const newPublication = document.createElement('div');
+      newPublication.className = 'publication';
+      newPublication.innerHTML = `
+        <h3>${title}</h3>
+        <div class="publication-meta">
+          Par: ${author} | Date: ${new Date().toLocaleDateString()}
+        </div>
+        <p>${content}</p>
+        <button class="button" onclick="editPublication(${document.querySelectorAll('.publication').length + 1})">Modifier</button>
+        <button class="button" onclick="deletePublication(${document.querySelectorAll('.publication').length + 1})">Supprimer</button>
+      `;
+
+      document.getElementById('publications').prepend(newPublication);
+      this.reset();
+      alert("Publication ajoutée avec succès !");
+    });
+  </script>
+</body>
+</html>

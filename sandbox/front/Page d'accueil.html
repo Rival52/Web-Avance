@@ -1,0 +1,191 @@
+<html><head><base<title>Académie des Groupes des Etudiants en Télécommunications - Accueil</title>
+<style>
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  header {
+    background: linear-gradient(to right, #35424a, #2c3e50);
+    color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    margin: 0;
+  }
+  header a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  header a:hover {
+    color: #e8491d;
+  }
+  nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  nav ul li {
+    margin-left: 20px;
+  }
+  #showcase {
+    background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80') no-repeat center center/cover;
+    height: 60vh;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #showcase h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  }
+  #showcase p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  }
+  .btn {
+    display: inline-block;
+    background: #e8491d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background: #f16234;
+  }
+  #features {
+    padding: 40px 0;
+    background: #fff;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .feature {
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .feature i {
+    font-size: 40px;
+    color: #e8491d;
+    margin-bottom: 10px;
+  }
+  #news {
+    padding: 40px 0;
+  }
+  .news-item {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  footer {
+    background: #35424a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><span style="color: #e8491d;">Académie</span> des Télécommunications</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="etudiants.html">Étudiants</a></li>
+          <li><a href="groupes.html">Groupes</a></li>
+          <li><a href="programmes.html">Programmes</a></li>
+          <li><a href="recherche.html">Recherche</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="showcase">
+    <h2>Façonnez l'Avenir des Télécommunications</h2>
+    <p>Découvrez nos programmes innovants et collaboratifs</p>
+    <a href="programmes.html" class="btn">Explorer nos programmes</a>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <h2>Pourquoi choisir notre Académie ?</h2>
+      <div class="grid">
+        <div class="feature">
+          <i class="fas fa-network-wired"></i>
+          <h3>Technologie de Pointe</h3>
+          <p>Accédez aux dernières innovations en télécommunications</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-users"></i>
+          <h3>Collaboration Internationale</h3>
+          <p>Travaillez avec des étudiants et experts du monde entier</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Projets Innovants</h3>
+          <p>Participez à des projets qui façonnent l'avenir de l'industrie</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>Enseignement d'Excellence</h3>
+          <p>Apprenez auprès de professeurs reconnus mondialement</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="container">
+      <h2>Actualités</h2>
+      <div class="news-item">
+        <h3>Lancement du Programme de Recherche sur la 6G</h3>
+        <p>Notre académie est fière d'annoncer le lancement d'un nouveau programme de recherche sur les technologies 6G, en partenariat avec des leaders de l'industrie.</p>
+        <a href="recherche.html#6G" class="btn">En savoir plus</a>
+      </div>
+      <div class="news-item">
+        <h3>Hackathon International des Télécommunications</h3>
+        <p>Participez à notre prochain hackathon international et relevez des défis passionnants dans le domaine des télécommunications avancées.</p>
+        <a href="evenements.html#hackathon" class="btn">S'inscrire</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Académie des Télécommunications. Tous droits réservés.</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body></html>

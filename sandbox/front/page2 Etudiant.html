@@ -1,0 +1,482 @@
+<html>
+  <head>
+    <base href="https://websim.ai/etudiants.html/index.html/etudiants.html" />
+    <title>Académie des Télécommunications - Gestion des Étudiants</title>
+    <style>
+      body {
+        font-family: "Roboto", Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        background: linear-gradient(to right, #35424a, #2c3e50);
+        color: #ffffff;
+        padding: 1rem 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      header a:hover {
+        color: #e8491d;
+      }
+      header ul {
+        display: flex;
+        list-style: none;
+      }
+      header ul li {
+        margin-left: 20px;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        padding: 20px 0;
+      }
+      #main {
+        background: #fff;
+        padding: 30px;
+        margin-top: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h2 {
+        color: #35424a;
+      }
+      .btn {
+        display: inline-block;
+        background: #e8491d;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .btn:hover {
+        background: #f16234;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #35424a;
+        color: white;
+      }
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+      form {
+        background: #f9f9f9;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
+      input[type="text"],
+      input[type="email"],
+      select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      .action-buttons {
+        display: flex;
+        justify-content: space-between;
+      }
+      .action-buttons button {
+        flex: 1;
+        margin: 0 5px;
+      }
+      footer {
+        background: #35424a;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>
+          <span style="color: #e8491d">Académie</span> des Télécommunications
+        </h1>
+        <nav>
+          <ul>
+            <li>
+              <a
+                href="file:///C:/Users/raman/Desktop/Nouveau%20dossier/Page1%20accueil.html"
+                >Accueil</a
+              >
+            </li>
+            <li>
+              <a
+                href="file:///C:/Users/raman/Desktop/Nouveau%20dossier/Page2%20Etudiant.html"
+                >Étudiants</a
+              >
+            </li>
+            <li>
+              <a
+                href="file:///C:/Users/raman/Desktop/Nouveau%20dossier/Page3%20publication.html"
+                >Programmes</a
+              >
+            </li>
+            <li><a href="recherche.html">Recherche</a></li>
+            <li>
+              <a
+                href="file:///C:/Users/raman/Desktop/Nouveau%20dossier/Page4%20contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main">
+        <h2>Gestion des Étudiants</h2>
+
+        <form id="searchForm">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Rechercher un étudiant..."
+          />
+          <button type="submit" class="btn">Rechercher</button>
+        </form>
+
+        <form id="studentForm">
+          <h3>Ajouter/Modifier un Étudiant</h3>
+          <input type="hidden" id="studentId" />
+          <input type="text" id="nom" placeholder="Nom" required />
+          <input type="text" id="prenom" placeholder="Prénom" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <select id="programme" required>
+            <option value="">Sélectionner un programme</option>
+            <option value="Licence Télécommunications">
+              Licence Télécommunications
+            </option>
+            <option value="Master Réseaux et Sécurité">
+              Master Réseaux et Sécurité
+            </option>
+            <option value="Master IoT et Systèmes Embarqués">
+              Master IoT et Systèmes Embarqués
+            </option>
+            <option value="Doctorat en Télécommunications">
+              Doctorat en Télécommunications
+            </option>
+          </select>
+          <button type="submit" class="btn" id="studentButton">
+            Enregistrer
+          </button>
+        </form>
+
+        <table id="studentTable">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Email</th>
+              <th>Programme</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Les données des étudiants seront insérées ici dynamiquement -->
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2023 Académie des Télécommunications. Tous droits réservés.</p>
+    </footer>
+
+    <script defer>
+      let students = [];
+
+      // Simulons une base de données avec un tableau
+      async function fetchStudentData() {
+        try {
+          const response = await fetch("http://localhost:4000/student");
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const newStudent = await response.json();
+          students = newStudent.data;
+          console.log("newStudent", newStudent.data);
+          displayStudents(newStudent.data);
+        } catch (error) {
+          console.error("Error fetching student data:", error);
+        }
+      }
+
+      // Call the async function
+
+      fetchStudentData();
+
+      // [
+      //   {
+      //     id: 1,
+      //     nom: "Dupont",
+      //     prenom: "Jean",
+      //     email: "jean.dupont@example.com",
+      //     programme: "Licence Télécommunications",
+      //   },
+      //   {
+      //     id: 2,
+      //     nom: "Martin",
+      //     prenom: "Marie",
+      //     email: "marie.martin@example.com",
+      //     programme: "Master Réseaux et Sécurité",
+      //   },
+      //   {
+      //     id: 3,
+      //     nom: "Bernard",
+      //     prenom: "Paul",
+      //     email: "paul.bernard@example.com",
+      //     programme: "Master IoT et Systèmes Embarqués",
+      //   },
+      //   {
+      //     id: 4,
+      //     nom: "Petit",
+      //     prenom: "Sophie",
+      //     email: "sophie.petit@example.com",
+      //     programme: "Doctorat en Télécommunications",
+      //   },
+      //   {
+      //     id: 5,
+      //     nom: "Robert",
+      //     prenom: "Lucas",
+      //     email: "lucas.robert@example.com",
+      //     programme: "Licence Télécommunications",
+      //   },
+      // ];
+
+      // Fonction pour afficher les étudiants
+      function displayStudents(studentsToDisplay = students) {
+        const tableBody = document.querySelector("#studentTable tbody");
+        tableBody.innerHTML = "";
+        studentsToDisplay.forEach((student) => {
+          const row = `<tr>
+              <td>${student.nom}</td>
+              <td>${student.prenom}</td>
+              <td>${student.email}</td>
+              <td>${student.programme}</td>
+              <td class="action-buttons">
+                <button onclick="editStudent(${student.id})" class="btn">Modifier</button>
+                <button onclick="deleteStudent(${student.id})" class="btn">Supprimer</button>
+              </td>
+            </tr>`;
+          tableBody.innerHTML += row;
+        });
+      }
+
+      // Fonction pour ajouter ou modifier un étudiant
+      async function saveStudent(event) {
+        event.preventDefault();
+        const form = event.target;
+        const studentId = form.studentId.value;
+
+        let student;
+        student = {
+          nom: form.nom.value,
+          prenom: form.prenom.value,
+          email: form.email.value,
+          programme: form.programme.value,
+        };
+        if (studentId) {
+          try {
+            const response = await fetch(
+              `http://localhost:4000/student/${studentId}`,
+              {
+                method: "PATCH",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(student),
+              }
+            );
+
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const newStudent = await response.json();
+            console.log("New student added:", newStudent);
+
+            // Fetch the list of students to verify the new student was added
+            const fetchResponse = await fetch("http://localhost:4000/student");
+            if (!fetchResponse.ok) {
+              throw new Error(`HTTP error! status: ${fetchResponse.status}`);
+            }
+
+            const students = await fetchResponse.json();
+            displayStudents(students.data);
+
+            console.log("All students:", students);
+          } catch (error) {
+            console.error("Error posting or fetching student data:", error);
+          }
+        } else {
+          try {
+            const response = await fetch("http://localhost:4000/student", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(student),
+            });
+
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const newStudent = await response.json();
+            console.log("New student added:", newStudent);
+
+            // Fetch the list of students to verify the new student was added
+            const fetchResponse = await fetch("http://localhost:4000/student");
+            if (!fetchResponse.ok) {
+              throw new Error(`HTTP error! status: ${fetchResponse.status}`);
+            }
+
+            const students = await fetchResponse.json();
+            displayStudents(students.data);
+
+            console.log("All students:", students);
+          } catch (error) {
+            console.error("Error posting or fetching student data:", error);
+          }
+        }
+        form.reset();
+        form.studentId.value = "";
+
+        // if (studentId) {
+        //   // Modification
+        //   const index = students.findIndex((s) => s.id === parseInt(studentId));
+        //   students[index] = student;
+        // } else {
+        //   // Ajout
+        //   students.push(student);
+        // }
+      }
+
+      // Fonction pour préremplir le formulaire lors de la modification
+      function editStudent(id) {
+        const student = students.find((s) => s.id === id);
+        const form = document.getElementById("studentForm");
+        const editButton = document.getElementById("studentButton");
+
+        form.studentId.value = student.id;
+        form.nom.value = student.nom;
+        form.prenom.value = student.prenom;
+        form.email.value = student.email;
+        form.programme.value = student.programme;
+      }
+
+      // Fonction pour supprimer un étudiant
+      async function deleteStudent(id) {
+        if (confirm("Êtes-vous sûr de vouloir supprimer cet étudiant ?")) {
+          // students = students.filter((s) => s.id !== id);
+          try {
+            const response = await fetch(
+              `http://localhost:4000/student/${id}`,
+              {
+                method: "DELETE",
+              }
+            );
+
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            console.log("Deleted student:", result);
+
+            // Fetch the list of students to verify the deletion
+            const fetchResponse = await fetch("http://localhost:4000/student");
+            if (!fetchResponse.ok) {
+              throw new Error(`HTTP error! status: ${fetchResponse.status}`);
+            }
+
+            const students = await fetchResponse.json();
+            displayStudents(students.data);
+
+            console.log("All students after deletion:", students);
+          } catch (error) {
+            console.error("Error deleting student data:", error);
+          }
+          // displayStudents();
+        }
+      }
+
+      // Fonction de recherche
+      async function searchStudents(event) {
+        event.preventDefault();
+        const searchTerm = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+
+        try {
+          const response = await fetch(
+            `http://localhost:4000/search_student?query=${searchTerm}`
+          );
+
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+
+          const resultsStudent = await response.json();
+
+          displayStudents(resultsStudent.data);
+        } catch (error) {
+          console.error("Error posting or fetching student data:", error);
+        }
+        // const filteredStudents = students.filter(
+        //   (student) =>
+        //     student.nom.toLowerCase().includes(searchTerm) ||
+        //     student.prenom.toLowerCase().includes(searchTerm) ||
+        //     student.email.toLowerCase().includes(searchTerm) ||
+        //     student.programme.toLowerCase().includes(searchTerm)
+        // );
+        // displayStudents(filteredStudents);
+      }
+
+      // Événements
+      document
+        .getElementById("studentForm")
+        .addEventListener("submit", saveStudent);
+      document
+        .getElementById("searchForm")
+        .addEventListener("submit", searchStudents);
+
+      // Affichage initial des étudiants
+      displayStudents();
+    </script>
+  </body>
+</html>
